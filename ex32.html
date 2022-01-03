@@ -1,25 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Screen개체</title>
     <style>
-        body{
-            background-color: red;
-        }
-        @media (min-width:900px){
-            body{
-                background-color: green;
-            }
-        }
+        
     </style>
 </head>
 <body>
     <script>
-        let scrwidth = screen.width;
-        let _body = document.addEventListener = --
+        let scrWidth = screen.width;
+        let _body = document.querySelector('body');
+        if(scrWidth<=599){
+            _body.style.backgroundColor='#f00';
+        }else{
+            _body.style.backgroundColor='#0f0';
+        }
+
         console.log(screen.width);
         console.log(screen.height);
         console.log(screen.availWidth);
