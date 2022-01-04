@@ -5,23 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-        window.onload = function(){
-            let box = document.querySelector('.box');
-            let a = 5;
-            box.innerHTML = !(52 + 42 % 6 && '대한민국' >= a++ || 42 != 52 ** 4);
-        }
-    </script>
-    <style>
-        .box{
-            width:500px;
-            margin:0 auto;
-            font-size:50px;
-            text-align:center;
-        }
-    </style>
+    <script src="./js/jquery-3.6.0.js"></script>
 </head>
 <body>
-    <div class="box"></div>
+    <input type="text" id="input01" class="txt-box">
+    <div>
+        <input type="text" id="input02" class="txt-box">
+    </div>
+    <script>
+        $(function(){
+            console.log($('#input01').is(':visible'));
+            if($('#input01').is(':visible')){
+                $('#input01').css({
+                    width:'100px',
+                    height:'100px',
+                })
+            }
+            if($('#input01').parent().is('body')){
+                $('#input01').css({
+                    color:'red',
+                })
+            }
+        })
+    </script>
 </body>
 </html>
